@@ -29,8 +29,8 @@
 // Set some parameters
 
 // Database access configuration
-$config["dbuser"] = "ora_zoeyuen";            // change "cwl" to your own CWL
-$config["dbpassword"] = "a99569139";    // change to 'a' + your student number
+$config["dbuser"] = "ora_student";            // change "cwl" to your own CWL
+$config["dbpassword"] = "a123456789";    // change to 'a' + your student number
 $config["dbserver"] = "dbhost.students.cs.ubc.ca:1522/stu";
 $db_conn = NULL;    // login credentials are used in connectToDB()
 
@@ -175,7 +175,6 @@ function connectToDB()
     // echo "trying Successfully connected to Oracle.\n";
     // Your username is ora_(CWL_ID) and the password is a(student number). For example,
     // ora_platypus is the username and a12345678 is the password.
-    // $db_conn = oci_connect("ora_zoeyuen", "a99569139", "dbhost.students.cs.ubc.ca:1522/stu");
     $db_conn = oci_connect($config["dbuser"], $config["dbpassword"], $config["dbserver"]);
 
     if ($db_conn) {
